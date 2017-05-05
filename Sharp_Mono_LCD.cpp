@@ -102,7 +102,8 @@ void Sharp_Mono_LCD::begin() {
 // 1<<n is a costly operation on AVR -- table usu. smaller & faster
 static const uint8_t PROGMEM
 set[] = {  1,  2,  4,  8,  16,  32,  64,  128 },
-        clr[] = { ~1, ~2, ~4, ~8, ~16, ~32, ~64, ~128 };
+        clr[] = { (uint8_t)(~1), (uint8_t)(~2), (uint8_t)(~4), (uint8_t)(~8),
+                  (uint8_t)(~16), (uint8_t)(~32), (uint8_t)(~64), (uint8_t)(~128) };
 
 /**************************************************************************/
 /*!

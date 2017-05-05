@@ -63,7 +63,7 @@ class Sharp_Mono_LCD : public Adafruit_GFX {
 #ifdef __AVR__
     uint8_t _sharpmem_vcom,;
 #endif
-#if defined(__SAM3X8E__) || defined(ARDUINO_ARCH_SAMD)
+#if defined(__SAM3X8E__) || defined(ARDUINO_ARCH_SAMD) || defined(__arm__)
     uint32_t _sharpmem_vcom;
 #endif
 
